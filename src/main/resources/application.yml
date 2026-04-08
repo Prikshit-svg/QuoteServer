@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: springboot-kotlin
+    version: 1.0.0
+  datasource:
+    url: jdbc:postgresql://aws-1-ap-northeast-2.pooler.supabase.com:5432/postgres
+    username: postgres.ieukelhuwleysouuoecm
+    password: ${POSTGRES_PASSWORD}
+
+
+  jpa:
+    hibernate:
+     ddl-auto: update
+
+quotes:
+  search:
+    ignore-case: true
+    min-length: 3
+  validation:
+    min-content-length: 5
+    max-content-length: 500
+    require-author: true
+    allowed-categories:
+      - "funny"
+      - "motivational"
+      - "tech"
+      - "wisdom"
