@@ -1,6 +1,9 @@
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk-jammy
 WORKDIR /app
+
 COPY . .
+
 RUN chmod +x gradlew
 RUN ./gradlew build
+
 CMD ["java", "-jar", "build/libs/*.jar"]
